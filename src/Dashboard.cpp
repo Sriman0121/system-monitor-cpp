@@ -8,6 +8,9 @@
 static const char* CLEAR = "\033[2J\033[H"; // clear screen + move home
 static const char* BOLD = "\033[1m";
 static const char* RESET = "\033[0m";
+static const char* RED = "\033[31m";
+static const char* GREEN = "\033[32m";
+static const char* YELLOW = "\033[33m";
 static const char* CYAN = "\033[36m";
 
 // draw a simple horizontal bar of width 'w' for percentage [0..100]
