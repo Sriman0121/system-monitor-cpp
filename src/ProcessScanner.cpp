@@ -16,8 +16,6 @@ static bool isNumber(const std::string &s) {
 static uint64_t try_stoull(const std::string &s) {
     try { return std::stoull(s); } catch (...) { return 0; }
 }
-static long try_stol(const std::string &s) {
-    try { return std::stol(s); } catch (...) { return 0; }
 }
 
 bool ProcessScanner::scanAll(std::vector<ProcessSnapshot>& out) {
@@ -25,7 +23,6 @@ bool ProcessScanner::scanAll(std::vector<ProcessSnapshot>& out) {
     DIR *d = opendir("/proc");
     if (!d) return false;
     struct dirent *entry;
-    long pageSizeKB = sysconf(_SC_PAGESIZE) / 1024; // convert pages to KB (fallback not used for VmRSS)
     while ((entry = readdir(d)) != nullptr) {
         std::string name(entry->d_name);
         if (!isNumber(name)) continue;
