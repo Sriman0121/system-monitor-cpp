@@ -17,7 +17,7 @@ PART3_TARGET = bin/part3-test
 PART4_SRC = src/part4_main.cpp src/ProcessScanner.cpp src/CpuUsage.cpp src/Dashboard.cpp
 PART4_TARGET = bin/part4-test
 
-# ✅ Part 5 (Dashboard Mode)
+# Part 5 (Dashboard Mode)
 PART5_SRC = src/part5_main.cpp src/ProcessScanner.cpp src/CpuUsage.cpp src/Dashboard.cpp src/MemoryInfo.cpp
 PART5_TARGET = bin/part5-dashboard
 
